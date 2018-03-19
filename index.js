@@ -31,9 +31,9 @@ function viewCart() {
       let message = `In your cart, you have `;
       for(let i=0; i < getCart().length; i++) {
         if(i != (getCart().length - 1)) {
-        message.concat(`${Object.keys(getCart()[i])[0]} at $${getCart()[i][Object.keys(getCart()[i])[0]]}, `);
+        message += `${Object.keys(getCart()[i])[0]} at $${getCart()[i][Object.keys(getCart()[i])[0]]}, `;
         } else {
-          message.concat(`and ${Object.keys(getCart()[i])[0]} at $${getCart()[i][Object.keys(getCart()[i])[0]]}.`);
+          message += `and ${Object.keys(getCart()[i])[0]} at $${getCart()[i][Object.keys(getCart()[i])[0]]}.`;
         }
   
       }
